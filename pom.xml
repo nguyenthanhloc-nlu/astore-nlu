@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.astore</groupId>
-    <artifactId>Astore</artifactId>
+    <artifactId>astore-nlu</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>Astore</name>
+    <name>astore-nlu</name>
   
 
     <properties>
@@ -53,7 +53,7 @@
     </dependencies>
 
     <build>
-        <finalName>Astore</finalName>
+        <finalName>astore-nlu</finalName>
         <plugins>
 
             <plugin>
