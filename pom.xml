@@ -8,7 +8,7 @@
     <artifactId>astore-nlu</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>astore-nlu</name>
-
+    <packaging>war</packaging>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -53,58 +53,37 @@
     </dependencies>
 
     <build>
-        <finalName>astore-nlu</finalName>
+        <finalName>Astore</finalName>
         <plugins>
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
                 <version>3.3.1</version>
-
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <version>2.3</version>
                 <executions>
                     <execution>
                         <phase>package</phase>
-
+                        <goals>
+                            <goal>copy</goal>
+                        </goals>
                         <configuration>
-                            <sources/><!-- this is important!-->
-                            <transformers>
-                                <transformer
-                                    implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>com.astore.controller.Index.java</mainClass>
-                                </transformer>
-                            </transformers>
+                            <artifactItems>
+                                <artifactItem>
+                                    <groupId>com.github.jsimone</groupId>
+                                    <artifactId>webapp-runner-main</artifactId>
+                                    <version>9.0.27.0</version>
+                                    <destFileName>webapp-runner.jar</destFileName>
+                                </artifactItem>
+                            </artifactItems>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
-
-
-
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-plugin-plugin</artifactId>
-                <configuration>
-                    <skipErrorNoDescriptorsFound>true</skipErrorNoDescriptorsFound>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>mojo-descriptor</id>
-                        <goals>
-                            <goal>descriptor</goal>
-                        </goals>
-                    </execution>
-                    <execution>
-                        <id>help-goal</id>
-                        <goals>
-                            <goal>helpmojo</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
-
-
-
         </plugins>
     </build>
 </project>
