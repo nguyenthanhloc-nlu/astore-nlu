@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Astore.iml" filepath="$PROJECT_DIR$/Astore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/astore-nlu.iml" filepath="$PROJECT_DIR$/astore-nlu.iml" />
     </modules>
   </component>
 </project>

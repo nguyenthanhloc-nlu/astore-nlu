@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Astore" />
+        <module name="astore-nlu" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Astore" target="1.8" />
+      <module name="astore-nlu" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
