@@ -62,7 +62,7 @@
 
 
         <div class="small-container id-products">
-            <h1 class="title"> <i class="fa fa-apple" aria-hidden="true"></i> Âm thanh</h1>
+            <h1 class="title"> <i class="fa fa-apple" aria-hidden="true"></i> Ipad</h1>
                 <div class="row">
                     <c:forEach items="${ipad}" var="p">
                         <div class="col-4 col-product">
@@ -82,7 +82,7 @@
         </div>
 
         <div class="page-btn">
-            <span>1</span>
+            <span class="page-active">1</span>
             <span>2</span>
             <span>3</span>
             <span>4</span>

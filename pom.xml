@@ -38,11 +38,11 @@
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/com.microsoft.sqlserver/mssql-jdbc -->
-        <dependency>
-            <groupId>com.microsoft.sqlserver</groupId>
-            <artifactId>mssql-jdbc</artifactId>
-            <version>9.2.0.jre8</version>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.microsoft.sqlserver</groupId>-->
+<!--            <artifactId>mssql-jdbc</artifactId>-->
+<!--            <version>9.2.0.jre8</version>-->
+<!--        </dependency>-->
 
         <!-- https://mvnrepository.com/artifact/jstl/jstl -->
         <dependency>
@@ -53,7 +53,7 @@
     </dependencies>
 
     <build>
-        <finalName>Astore</finalName>
+        <finalName>astore-nlu</finalName>
         <plugins>
 
             <plugin>
@@ -62,27 +62,32 @@
                 <version>3.3.1</version>
             </plugin>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <version>2.3</version>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>copy</goal>
-                        </goals>
-                        <configuration>
-                            <artifactItems>
-                                <artifactItem>
-                                    <groupId>com.github.jsimone</groupId>
-                                    <artifactId>webapp-runner-main</artifactId>
-                                    <version>9.0.27.0</version>
-                                    <destFileName>webapp-runner.jar</destFileName>
-                                </artifactItem>
-                            </artifactItems>
-                        </configuration>
-                    </execution>
-                </executions>
+                <groupId>com.microsoft.azure</groupId>
+                <artifactId>azure-webapp-maven-plugin</artifactId>
+                <version>2.2.0</version>
+                <configuration>
+                    <subscriptionId>fef6d684-2e39-48a8-8800-c06e133f268a</subscriptionId>
+                    <resourceGroup>thanhlocpc</resourceGroup>
+                    <appName>thanhloc-nlu</appName>
+                    <pricingTier>B2</pricingTier>
+                    <region>westus</region>
+                    <runtime>
+                        <os>Linux</os>
+                        <webContainer>Java SE</webContainer>
+                        <javaVersion>Java 8</javaVersion>
+                    </runtime>
+                    <deployment>
+                        <resources>
+                            <resource>
+                                <type>jar</type>
+                                <directory>${project.basedir}/target</directory>
+                                <includes>
+                                    <include>*.jar</include>
+                                </includes>
+                            </resource>
+                        </resources>
+                    </deployment>
+                </configuration>
             </plugin>
         </plugins>
     </build>

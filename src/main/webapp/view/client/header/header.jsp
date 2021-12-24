@@ -10,14 +10,13 @@
     <title>ASTORE | Home</title>
     <link rel="stylesheet" href="<%=request.getContextPath()%>/view/client/assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<%--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">--%>
+    <%--    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">--%>
     <link rel="icon" href="<%=request.getContextPath()%>/view/client/images/logotitle.png" type="image/x-icon" />
 
-<%--    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>--%>
+    <%--    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>--%>
     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet'>
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
 
-    </style>
 </head>
 
 <body>
@@ -43,16 +42,16 @@
                 <input type="text" class="input-search" placeholder="iPhone 13...">
             </div>
 
-            <a href="cart.html">
+            <a href="<%=request.getContextPath()%>/cart">
                 <img src="<%=request.getContextPath()%>/view/client/assets/images/cart.png" width="40px" height="40px">
                 <span class="header__cart-notice">3</span>
             </a>
 
 
-            <div id="link-account">
-                <a href="account.html"><img src="<%=request.getContextPath()%>/view/client/assets/images/account.png" width="40px" height="40px"></a>
+            <div id="link-account" style="margin-left: 24px;">
+                <a href="<%=request.getContextPath()%>/view/client/account.jsp"><img src="<%=request.getContextPath()%>/view/client/assets/images/account.png" width="40px" height="40px"></a>
             </div>
-            <div id="link-sign-in" style=" margin-left: 35px;"><a href="<%=request.getContextPath()%>/view/client/signIn.html">
+            <div id="link-sign-in" style=" margin-left: 35px;"><a href="<%=request.getContextPath()%>/view/client/signIn.jsp">
                 <p>Đăng nhập</p>
             </a></div>
 

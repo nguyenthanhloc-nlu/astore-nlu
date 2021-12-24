@@ -25,21 +25,28 @@
 <div class="small-container id-products" id="id-categories">
     <div class="row">
         <div class="col-4 col-product">
-            <a href="product_details.html"></a>
-            <img src="view/client/assets/images/iphone/iphone-12-promax-blue-1-650x650.png">
-            <h4>iPhone</h4>
+            <a href="<%=request.getContextPath()%>/Iphone">
+                <img src="${iphone.get(2).listPhotoUrl.get(0)}">
+                <h4>iPhone</h4>
+            </a>
         </div>
         <div class="col-4 col-product">
-            <img src="view/client/assets/images/mac/apple-macbook-pro-14-m1-pro-2021-xam-thumb-650x650.png">
-            <h4>Mac</h4>
+            <a href="<%=request.getContextPath()%>/Mac">
+                <img src="${mac.get(2).listPhotoUrl.get(0)}">
+                <h4>Mac</h4>
+            </a>
         </div>
         <div class="col-4 col-product">
-            <img src="view/client/assets/images/ipad/ipad3.png">
-            <h4>iPad</h4>
+            <a href="<%=request.getContextPath()%>/IPad">
+                <img src="${ipad.get(2).listPhotoUrl.get(0)}">
+                <h4>iPad</h4>
+            </a>
         </div>
         <div class="col-4 col-product">
-            <img src="view/client/assets/images/watch/w4.png">
-            <h4>Watch</h4>
+            <a href="<%=request.getContextPath()%>/Watch">
+                <img src="${watch.get(2).listPhotoUrl.get(0)}">
+                <h4>Watch</h4>
+            </a>
         </div>
     </div>
 </div>

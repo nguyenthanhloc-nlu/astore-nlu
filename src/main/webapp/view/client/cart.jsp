@@ -75,7 +75,7 @@
         <h1 class="title"> Giỏ hàng </h1>
     </div>
 </div>
-<div class="small-container">
+<div class="small-container" style="width: 85%; ">
     <div class="d-flex justify-content-center mt-50 mb-50 cart-page cart-container">
         <div class="cart-div">
             <div class="row">

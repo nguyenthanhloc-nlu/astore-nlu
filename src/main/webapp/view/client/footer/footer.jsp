@@ -50,7 +50,7 @@
                 </ul>
             </div>
             <div class="footer-col-3">
-                <a href="<%=request.getContextPath()%>/index.jsp">
+                <a href="<%=request.getContextPath()%>/">
                     <img src="<%=request.getContextPath()%>/view/client/assets/images/logo1.png" />
                 </a>
                 <p>Trải nghiệm tốt nhất về sản phẩm và dịch vụ của Apple tới toàn bộ người dùng tại Việt Nam.

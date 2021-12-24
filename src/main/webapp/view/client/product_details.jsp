@@ -17,6 +17,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
     <style>
         .information-product-details {
             width: 100%;
@@ -54,6 +56,31 @@
             font-size: 14px;
         }
     </style>
+    <script>
+        $(document).ready(function(){
+            $(".img-detail").each(function(){
+
+                var img = new Image($(this)); // creating image element
+                // console.log(img.)
+                img.onerror = function() { // trigger if the image wasn't loaded
+                    console.log("error loading image 1");
+                    $(this).css("display", "none");
+
+                }
+
+                img.onAbort  = function() { // trigger if the image wasn't loaded
+                    console.log("error loading image 1");
+                    $(this).css("display", "none");
+
+                }
+
+                $(this).on('error', function() {
+                    console.log("error loading image 3");
+                    $(this).hide();
+                });
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -188,7 +215,7 @@
         <div class="row product-detail-container details-of-product">
             <div class="col">
                 <c:forEach items="${product.listProductDetail}" var="img">
-                    <img src="${img}" width="100%" class="">
+                    <img src="${img}" width="100%" class="img-detail" >
                 </c:forEach>
             </div>
         </div>
@@ -232,6 +259,32 @@
 
             colorChose.setAttribute("class", "products-color active-color");
         }
+
+        $(".img-detail").each(function(){
+
+            var img = new Image($(this)); // creating image element
+            // console.log(img.)
+            img.onerror = function() { // trigger if the image wasn't loaded
+                console.log("error loading image 1");
+                $(this).css("display", "none");
+
+            }
+
+            img.onAbort  = function() { // trigger if the image wasn't loaded
+                console.log("error loading image 1");
+                $(this).css("display", "none");
+
+            }
+
+            $(this).on('error', function() {
+                console.log("error loading image 3");
+                $(this).hide();
+            });
+        });
+
+
+
+
     </script>
 </body>
 </html>
